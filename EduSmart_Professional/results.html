@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#fff7f4"><title>My Results | EduSmart</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="index.html#subjects">Subjects</a><a href="index.html#planner">Study planner</a><a class="active" href="results.html">My results</a><a href="doubt.html">Doubt corner</a><a href="student.html">Student info</a></nav>
+  <a class="header-profile" href="student.html"><span class="avatar" id="headerAvatar">S</span><span id="headerStudentName">Student profile</span><span class="chevron">↗</span></a>
+</header>
+<main class="page-shell">
+  <section class="page-hero"><span class="eyebrow">MEASURE YOUR GROWTH</span><h1>Assessment results</h1><p>Review your completed quizzes, track your average score, and decide what to revise next.</p></section>
+  <section class="section-block">
+    <div class="section-heading"><div><span class="eyebrow">PERFORMANCE SUMMARY</span><h2>Your progress in numbers.</h2><p>These figures update after you finish a quiz on the home page.</p></div><a class="inline-link" href="index.html#subjects">Take a quiz →</a></div>
+    <div class="results-summary"><article class="summary-tile"><span>Quizzes completed</span><strong id="resultTotal">0</strong></article><article class="summary-tile"><span>Average score</span><strong id="resultAverage">—</strong></article><article class="summary-tile"><span>Best score</span><strong id="resultBest">—</strong></article></div>
+    <div class="surface-card">
+      <div class="panel-heading"><div><span class="eyebrow">QUIZ HISTORY</span><h2>Completed assessments</h2><p>Most recent attempts appear first.</p></div><button class="btn danger-button" id="clearResults" type="button">Clear history</button></div>
+      <div id="resultsContent"></div>
+    </div>
+  </section>
+  <section class="section-block surface-card">
+    <div class="panel-heading"><div><span class="eyebrow">WHAT NEXT?</span><h2>Keep building your confidence.</h2><p>Use your results to guide your next study session.</p></div></div>
+    <div class="quick-links"><a href="index.html#subjects"><span class="quick-link-icon">✓</span><span><b>Practise another subject</b><small>Take a short quiz and compare your scores</small></span><span class="quick-arrow">→</span></a><a href="student.html"><span class="quick-link-icon">◎</span><span><b>Review student information</b><small>Update your learner profile and study goal</small></span><span class="quick-arrow">→</span></a></div>
+  </section>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a><p>Learn at your pace. Grow every day.</p><small>© <span id="year"></span> EduSmart · Front-end student project</small></footer>
+</main>
+<script src="preferences.js"></script>
+<script src="results.js"></script>
+</body></html>

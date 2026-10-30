@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#fff7f4"><title>Doubt Corner | EduSmart</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="index.html#subjects">Subjects</a><a href="index.html#planner">Study planner</a><a href="results.html">My results</a><a class="active" href="doubt.html">Doubt corner</a><a href="student.html">Student info</a></nav>
+  <a class="header-profile" href="student.html"><span class="avatar" id="headerAvatar">S</span><span id="headerStudentName">Student profile</span><span class="chevron">↗</span></a>
+</header>
+<main class="page-shell">
+  <section class="page-hero"><span class="eyebrow">LEARN WITHOUT GETTING STUCK</span><h1>Doubt-solving corner</h1><p>Search common questions, explore quick explanations, or save a doubt to revisit later.</p></section>
+  <section class="section-block">
+    <div class="section-heading"><div><span class="eyebrow">QUICK ANSWERS</span><h2>Frequently asked questions</h2><p>Search by keyword or filter by subject.</p></div></div>
+    <div class="doubt-tools"><input id="faqSearch" type="search" placeholder="Search a question or keyword..." aria-label="Search questions"><select id="faqCategory" aria-label="Filter by subject"><option value="all">All subjects</option><option>Python</option><option>DBMS</option><option>Web Programming</option><option>Data Analytics</option></select></div>
+    <div class="doubt-layout">
+      <section><div class="faq-list" id="faqList" aria-live="polite"></div><p class="doubt-count" id="faqCount"></p></section>
+      <aside class="doubt-card">
+        <span class="eyebrow">ASK YOUR QUESTION</span><h2>Still have a doubt?</h2><p>Write your question below. It will be saved in this browser so you can review it later.</p>
+        <div class="doubt-notice" id="doubtNotice" role="status" hidden></div>
+        <form id="doubtForm" class="doubt-form">
+          <label for="doubtSubject">Subject<select id="doubtSubject" required><option value="">Choose a subject</option><option>Python</option><option>DBMS</option><option>Web Programming</option><option>Data Analytics</option><option>Other</option></select></label>
+          <label for="doubtTitle">Question title<input id="doubtTitle" maxlength="100" required placeholder="e.g. What is a Python tuple?"></label>
+          <label for="doubtDetails">Details<textarea id="doubtDetails" maxlength="1000" placeholder="Add details to help you remember the problem..."></textarea></label>
+          <button class="btn btn-primary" type="submit">Save my doubt →</button>
+        </form>
+        <div class="panel-heading" style="margin-top:24px;margin-bottom:8px"><div><h2 style="font-size:17px">My saved doubts</h2></div></div>
+        <div id="savedDoubts" class="doubt-list"></div>
+      </aside>
+    </div>
+  </section>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a><p>Learn at your pace. Grow every day.</p><small>© <span id="year"></span> EduSmart · Front-end student project</small></footer>
+</main>
+<script src="preferences.js"></script><script src="doubt.js"></script>
+</body></html>

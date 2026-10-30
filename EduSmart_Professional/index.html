@@ -1,0 +1,634 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f4">
+  <title>EduSmart | Student Learning Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="EduSmart home">
+    <span class="brand-mark">E</span>
+    <span>EduSmart<small>STUDENT LEARNING HUB</small></span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle"
+    aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="index.html">Home</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#planner">Study planner</a>
+    <a href="results.html">My results</a>
+    <a href="doubt.html">Doubt corner</a>
+    <a href="student.html">Student info</a>
+    <a href="#flashcards">Flashcards</a>
+    <a href="#focusTimer">Focus Timer</a>
+    <a href="#mockExam">Mock Exam</a>
+    <a href="#resources">Resources</a>
+  </nav>
+  
+
+  <a class="header-profile" href="student.html">
+    <span class="avatar" id="headerAvatar">S</span>
+    <span id="headerStudentName">Student profile</span>
+    <span class="chevron">↗</span>
+  </a>
+</header>
+
+<main class="page-shell">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        YOUR SPACE TO LEARN AND GROW
+      </span>
+
+      <p id="personalGreeting" class="personal-greeting" aria-live="polite">
+        Welcome!
+      </p>
+
+      <h1>Make every study session <span>count.</span></h1>
+
+      <p>
+        One focused step at a time. Organize your learning,
+        practise what you know, and celebrate your progress.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#subjects">
+          Explore subjects <span>→</span>
+        </a>
+        <a class="btn btn-quiet" href="results.html">View my results</a>
+      </div>
+
+      <div class="hero-proof">
+        <span class="proof-avatars"><i>✦</i><i>✓</i><i>✧</i></span>
+        <span>Learn consistently. Improve confidently.</span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-label="Illustration of books and a graduation cap">
+      <div class="visual-orbit orbit-one"></div>
+      <div class="visual-orbit orbit-two"></div>
+
+      <div class="visual-card visual-card-top">
+        <span class="mini-icon">✦</span>
+        <span><b>Keep going</b><small>Progress comes with practice</small></span>
+      </div>
+
+      <div class="book-stack">
+        <div class="book book-back"></div>
+        <div class="book book-middle"></div>
+        <div class="book book-front">✧</div>
+        <div class="cap">🎓</div>
+      </div>
+
+      <div class="visual-card visual-card-bottom">
+        <span class="streak-icon">↗</span>
+        <span><b>Your next step</b><small>Take a quick quiz</small></span>
+      </div>
+
+      <span class="spark spark-a">✦</span>
+      <span class="spark spark-b">✧</span>
+    </div>
+  </section>
+  
+<!-- DAILY LEARNING MOTIVATION -->
+<section class="motivation-section">
+  <div class="motivation-card">
+    <div class="motivation-content">
+      <span class="eyebrow">✦ DAILY INSPIRATION</span>
+
+      <h2 id="dailyQuote">
+        Small steps every day lead to big results.
+      </h2>
+
+      <p>Keep learning, keep growing, and believe in your progress.</p>
+
+      <div class="daily-challenge">
+        <span>🎯 TODAY'S CHALLENGE</span>
+        <strong id="dailyChallenge">
+          Complete one quiz and revise one topic.
+        </strong>
+      </div>
+
+      <button class="btn motivation-button" id="newMotivation">
+        Another motivation ✨
+      </button>
+    </div>
+
+    <div class="motivation-decoration">✦</div>
+  </div>
+</section>
+
+
+  <!-- LEARNER CARD: NEW SECTION -->
+  <section class="learner-section" id="learnerCard">
+    <div class="learner-card">
+
+      <div class="learner-card-main">
+        <div class="learner-avatar" id="learnerAvatar">S</div>
+
+        <div class="learner-details">
+          <span class="learner-label">YOUR LEARNING PROFILE</span>
+          <h2 id="learnerName">Welcome, Student!</h2>
+          <p id="learnerCourse">
+            Add your course details to get started.
+          </p>
+          <p class="learner-goal">
+            <strong>Learning goal:</strong>
+            <span id="learnerGoal">Set your goal in Student Info.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="learner-card-stats">
+        <div class="learner-mini-stat">
+          <span>Quizzes completed</span>
+          <strong id="learnerQuizzes">0</strong>
+        </div>
+
+        <div class="learner-mini-stat">
+          <span>Average score</span>
+          <strong id="learnerAverage">—</strong>
+        </div>
+      </div>
+
+      <div class="learner-progress-area">
+        <div class="learner-progress-heading">
+          <span>Learning performance</span>
+          <strong id="learnerProgressText">0%</strong>
+        </div>
+
+        <div class="learner-progress-track">
+          <div id="learnerProgressBar" class="learner-progress-fill"></div>
+        </div>
+
+        <p id="learnerProgressMessage" aria-live="polite">
+          Complete your first quiz to start tracking your performance.
+        </p>
+      </div>
+
+      <div class="learner-card-footer">
+        <span>
+          <span class="learner-status-dot"></span>
+          Your personal learning space
+        </span>
+
+        <a href="student.html" class="learner-profile-link">
+          Edit profile <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  
+<!-- ACHIEVEMENT AND BADGE SYSTEM -->
+<section class="section-block achievement-section" id="achievements">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">YOUR MILESTONES</span>
+      <h2>Every achievement counts.</h2>
+      <p>Unlock badges as you continue learning and practising.</p>
+    </div>
+    <span class="date-chip" id="badgeCount">0 / 6 unlocked</span>
+  </div>
+
+  <div class="achievement-grid" id="achievementGrid"></div>
+</section>
+
+<!-- ===================================
+     SMART FLASHCARDS
+=================================== -->
+
+<section class="section-block feature-section" id="flashcards">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">QUICK REVISION</span>
+      <h2>Smart Flashcards</h2>
+      <p>Test your memory and revise important concepts.</p>
+    </div>
+    <span class="date-chip" id="flashcardCounter">1 / 8</span>
+  </div>
+
+  <div class="flashcard-area">
+    <button class="flashcard" id="flashcard" type="button"
+      aria-label="Flashcard. Click to reveal the answer.">
+      <span class="flashcard-label" id="flashcardLabel">QUESTION</span>
+      <strong id="flashcardText">What is Python?</strong>
+      <small>Click the card to reveal the answer</small>
+    </button>
+
+    <div class="flashcard-controls">
+      <button class="btn secondary-btn" id="previousCard" type="button">← Previous</button>
+      <button class="btn" id="flipCard" type="button">Reveal Answer</button>
+      <button class="btn secondary-btn" id="nextCard" type="button">Next →</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================================
+     FOCUS TIMER
+=================================== -->
+
+<section class="section-block feature-section" id="focusTimer">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">STAY PRODUCTIVE</span>
+      <h2>Focus Timer</h2>
+      <p>Concentrate on your studies with focused sessions.</p>
+    </div>
+  </div>
+
+  <div class="focus-card">
+    <span class="focus-label" id="timerMode">FOCUS SESSION</span>
+
+    <div class="timer-circle">
+      <span id="timerDisplay">25:00</span>
+    </div>
+
+    <div class="timer-controls">
+      <button class="btn" id="startTimer" type="button">Start</button>
+      <button class="btn secondary-btn" id="pauseTimer" type="button">Pause</button>
+      <button class="btn secondary-btn" id="resetTimer" type="button">Reset</button>
+    </div>
+
+    <div class="timer-settings">
+      <button class="timer-mode active" id="focusMode" type="button">
+        Focus · 25 min
+      </button>
+      <button class="timer-mode" id="breakMode" type="button">
+        Break · 5 min
+      </button>
+    </div>
+
+    <p class="focus-stat">
+      Completed focus sessions:
+      <strong id="focusSessions">0</strong>
+    </p>
+  </div>
+</section>
+
+
+<!-- ===================================
+     MOCK EXAMINATION
+=================================== -->
+
+<section class="section-block feature-section" id="mockExam">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">EXAM PRACTICE</span>
+      <h2>Mock Examination</h2>
+      <p>Test your preparation with a timed assessment.</p>
+    </div>
+  </div>
+
+  <div class="mock-exam-card">
+    <div id="examSetup">
+      <label for="examSubject">Choose your subject</label>
+
+      <select id="examSubject" class="feature-select">
+        <option value="Python Programming">Python Programming</option>
+        <option value="Database Management">Database Management</option>
+        <option value="Web Programming">Web Programming</option>
+        <option value="Data Analytics">Data Analytics</option>
+      </select>
+
+      <p class="exam-info">
+        3 questions · 5 minutes · 1 mark per question
+      </p>
+
+      <button class="btn" id="startExam" type="button">
+        Start Mock Examination →
+      </button>
+    </div>
+
+    <div id="examArea" hidden>
+      <div class="exam-top">
+        <span id="examProgress">Question 1 of 3</span>
+        <span class="exam-clock" id="examTimer">05:00</span>
+      </div>
+
+      <div class="exam-progress-track">
+        <div id="examProgressBar"></div>
+      </div>
+
+      <h3 id="examQuestion">Question appears here</h3>
+
+      <div id="examOptions" class="exam-options"></div>
+
+      <div class="exam-navigation">
+        <button class="btn secondary-btn" id="examPrevious" type="button">
+          Previous
+        </button>
+        <button class="btn" id="examNext" type="button">
+          Next →
+        </button>
+      </div>
+
+      <button class="btn submit-exam" id="submitExam" type="button">
+        Submit Examination
+      </button>
+    </div>
+
+    <div id="examResult" hidden>
+      <div class="exam-result-icon">🏆</div>
+      <h3 id="examResultTitle">Examination Completed!</h3>
+      <p id="examScore">Your score: 0%</p>
+      <p id="examResultMessage"></p>
+      <button class="btn" id="retakeExam" type="button">
+        Try Again
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================================
+     STUDY RESOURCE LIBRARY
+=================================== -->
+
+<section class="section-block feature-section" id="resources">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">LEARNING MATERIALS</span>
+      <h2>Study Resource Library</h2>
+      <p>Explore useful learning resources for your subjects.</p>
+    </div>
+  </div>
+
+  <div class="resource-toolbar">
+    <input type="search" id="resourceSearch"
+      placeholder="Search study resources..."
+      aria-label="Search study resources">
+
+    <select id="resourceFilter" class="feature-select">
+      <option value="All">All Subjects</option>
+      <option value="Python Programming">Python Programming</option>
+      <option value="Database Management">Database Management</option>
+      <option value="Web Programming">Web Programming</option>
+      <option value="Data Analytics">Data Analytics</option>
+    </select>
+  </div>
+
+  <div class="resource-grid" id="resourceGrid"></div>
+
+  <p class="resource-note">
+    Resources open in a new browser tab. Internet access may be required.
+  </p>
+</section>
+
+  <!-- DASHBOARD -->
+  <section class="section-block" id="dashboard">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">YOUR OVERVIEW</span>
+        <h2>A little progress, every day.</h2>
+        <p>Your learning activity at a glance.</p>
+      </div>
+      <span class="date-chip" id="todayDate"></span>
+    </div>
+
+    <div class="stats-grid">
+      <article class="stat-card stat-coral">
+        <div class="stat-card-head">
+          <span class="stat-icon">▤</span>
+          <span class="stat-kicker">LEARNING</span>
+        </div>
+        <p>Subjects</p>
+        <strong id="subjectCount">4</strong>
+        <small>Ready to explore</small>
+      </article>
+
+      <article class="stat-card stat-lilac">
+        <div class="stat-card-head">
+          <span class="stat-icon">✓</span>
+          <span class="stat-kicker">PRACTICE</span>
+        </div>
+        <p>Quizzes completed</p>
+        <strong id="quizCount">0</strong>
+        <small>Every attempt counts</small>
+      </article>
+
+      <article class="stat-card stat-amber">
+        <div class="stat-card-head">
+          <span class="stat-icon">◎</span>
+          <span class="stat-kicker">RESULTS</span>
+        </div>
+        <p>Average score</p>
+        <strong id="averageScore">—</strong>
+        <small>Across completed quizzes</small>
+      </article>
+
+      <article class="stat-card stat-mint">
+        <div class="stat-card-head">
+          <span class="stat-icon">☑</span>
+          <span class="stat-kicker">FOCUS</span>
+        </div>
+        <p>Tasks completed</p>
+        <strong id="taskCount">0/0</strong>
+        <small>Keep your plan moving</small>
+      </article>
+    </div>
+  </section>
+
+  <!-- SUBJECTS -->
+  <section class="section-block" id="subjects">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">YOUR LEARNING PATH</span>
+        <h2>Pick up where you left off.</h2>
+        <p>Choose a subject to open a short practice quiz.</p>
+      </div>
+      <a class="inline-link" href="results.html">
+        See all results <span>→</span>
+      </a>
+    </div>
+
+    <div class="subject-grid">
+      <article class="subject-card">
+        <div class="subject-art art-coral"><span>⌘</span><i>01</i></div>
+        <div class="subject-body">
+          <span class="category category-coral">PROGRAMMING</span>
+          <h3>Python Programming</h3>
+          <p>Build confidence with core coding concepts.</p>
+          <div class="subject-progress">
+            <span>Sample course progress</span><b>70%</b>
+          </div>
+          <div class="progress-track"><span style="width:70%"></span></div>
+          <button class="btn btn-outline quiz-button" data-subject="Python Programming">
+            Start practice <span>→</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="subject-card">
+        <div class="subject-art art-lilac"><span>▦</span><i>02</i></div>
+        <div class="subject-body">
+          <span class="category category-lilac">DATABASES</span>
+          <h3>Database Management</h3>
+          <p>Explore SQL, tables, and database concepts.</p>
+          <div class="subject-progress">
+            <span>Sample course progress</span><b>55%</b>
+          </div>
+          <div class="progress-track"><span style="width:55%"></span></div>
+          <button class="btn btn-outline quiz-button" data-subject="Database Management">
+            Start practice <span>→</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="subject-card">
+        <div class="subject-art art-amber"><span>⌘</span><i>03</i></div>
+        <div class="subject-body">
+          <span class="category category-amber">WEB DESIGN</span>
+          <h3>Web Programming</h3>
+          <p>Bring websites to life with HTML, CSS, and JS.</p>
+          <div class="subject-progress">
+            <span>Sample course progress</span><b>80%</b>
+          </div>
+          <div class="progress-track"><span style="width:80%"></span></div>
+          <button class="btn btn-outline quiz-button" data-subject="Web Programming">
+            Start practice <span>→</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="subject-card">
+        <div class="subject-art art-mint"><span>◫</span><i>04</i></div>
+        <div class="subject-body">
+          <span class="category category-mint">ANALYTICS</span>
+          <h3>Data Analytics</h3>
+          <p>Discover data handling and visualization.</p>
+          <div class="subject-progress">
+            <span>Sample course progress</span><b>45%</b>
+          </div>
+          <div class="progress-track"><span style="width:45%"></span></div>
+          <button class="btn btn-outline quiz-button" data-subject="Data Analytics">
+            Start practice <span>→</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STUDY PLANNER AND LEARNING RHYTHM -->
+  <section class="section-block lower-grid">
+    <article class="surface-card" id="planner">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">MAKE A PLAN</span>
+          <h2>Study planner</h2>
+          <p>Turn a goal into your next small step.</p>
+        </div>
+        <span class="panel-symbol">✎</span>
+      </div>
+
+      <form id="taskForm" class="task-form">
+        <label class="sr-only" for="taskInput">New study task</label>
+        <input id="taskInput" maxlength="100"
+          placeholder="e.g. Revise JavaScript events" required>
+        <button class="btn btn-primary" type="submit">Add task +</button>
+      </form>
+
+      <div id="taskList" class="task-list"></div>
+      <p class="helper-text">Tasks are saved in this browser on this device.</p>
+    </article>
+
+    <article class="surface-card">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">A MOMENT TO RESET</span>
+          <h2>Your learning rhythm</h2>
+          <p>Consistency beats cramming.</p>
+        </div>
+        <span class="panel-symbol">✧</span>
+      </div>
+
+      <div class="rhythm-card">
+        <div class="rhythm-number">25<span>min</span></div>
+        <div>
+          <b>Focus, then recharge.</b>
+          <p>Try 25 minutes of focused study followed by a 5-minute break.</p>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <a href="student.html">
+          <span class="quick-link-icon">◎</span>
+          <span><b>Student information</b><small>Personalize your profile</small></span>
+          <span class="quick-arrow">→</span>
+        </a>
+
+        <a href="doubt.html">
+          <span class="quick-link-icon">?</span>
+          <span><b>Doubt-solving corner</b><small>Search answers or submit a question</small></span>
+          <span class="quick-arrow">→</span>
+        </a>
+
+        <a href="results.html">
+          <span class="quick-link-icon">↗</span>
+          <span><b>Assessment history</b><small>Review your quiz results</small></span>
+          <span class="quick-arrow">→</span>
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">E</span>
+      <span>EduSmart<small>STUDENT LEARNING HUB</small></span>
+    </a>
+    <p>Learn at your pace. Grow every day.</p>
+    <small>© <span id="year"></span> EduSmart · Front-end student project</small>
+  </footer>
+
+</main>
+
+<!-- QUIZ MODAL -->
+<div class="modal" id="quizModal" role="dialog" aria-modal="true"
+  aria-labelledby="quizTitle" hidden>
+  <div class="modal-card">
+    <button class="modal-close" id="closeQuiz" aria-label="Close quiz">×</button>
+    <span class="eyebrow">QUICK ASSESSMENT</span>
+    <h2 id="quizTitle">Practice quiz</h2>
+    <p id="quizSubject" class="modal-subtitle"></p>
+
+    <div class="quiz-meta">
+      <span id="questionCounter">Question 1 of 3</span>
+      <span id="quizTimer">30 sec</span>
+    </div>
+
+    <div class="progress-track">
+      <span id="quizProgress" style="width:0%"></span>
+    </div>
+
+    <h3 id="questionText" class="question-text"></h3>
+    <div id="answerOptions" class="answer-options"></div>
+    <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+
+    <button id="nextQuestion" class="btn btn-primary btn-full" disabled>
+      Next question →
+    </button>
+    <button id="restartQuiz" class="btn btn-outline btn-full" hidden>
+      Try again
+    </button>
+  </div>
+</div>
+
+<script src="preferences.js"></script>
+<script src="script.js"></script>
+<script src="learner-card.js"></script>
+
+</body>
+</html>

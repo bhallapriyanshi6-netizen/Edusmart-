@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#fff7f4"><title>Student Information | EduSmart</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="index.html#subjects">Subjects</a><a href="index.html#planner">Study planner</a><a href="results.html">My results</a><a href="doubt.html">Doubt corner</a><a class="active" href="student.html">Student info</a></nav>
+  <a class="header-profile" href="student.html"><span class="avatar" id="headerAvatar">S</span><span id="headerStudentName">Student profile</span><span class="chevron">↗</span></a>
+</header>
+<main class="page-shell">
+  <section class="page-hero"><span class="eyebrow">YOUR PERSONAL SPACE</span><h1>Student information</h1><p>Set up your learner profile. Your details are saved locally in this browser for this project demo.</p></section>
+  <div class="content-grid">
+    <section class="surface-card">
+      <div class="panel-heading"><div><span class="eyebrow">PROFILE DETAILS</span><h2>Edit your profile</h2><p>Fields marked with * are required.</p></div><span class="panel-symbol">◎</span></div>
+      <div id="saveNotice" class="notice" role="status" hidden>Profile saved successfully.</div>
+      <form id="studentForm">
+        <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="name" maxlength="80" autocomplete="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="studentEmail">Email address</label><input id="studentEmail" name="email" type="email" maxlength="120" autocomplete="email" placeholder="student@example.com"></div>
+        <div class="field"><label for="studentId">Student ID / roll number</label><input id="studentId" name="studentId" maxlength="40" placeholder="e.g. MCA2026-014"></div>
+        <div class="field"><label for="course">Course / programme</label><input id="course" name="course" maxlength="80" placeholder="e.g. MCA"></div>
+        <div class="field"><label for="yearOfStudy">Year of study</label><select id="yearOfStudy" name="year"><option value="">Select year</option><option>First year</option><option>Second year</option><option>Third year</option><option>Fourth year</option><option>Other</option></select></div>
+        <div class="field"><label for="learningGoal">Learning goal</label><textarea id="learningGoal" name="goal" maxlength="300" placeholder="What would you like to achieve this semester?"></textarea></div>
+        <p class="field-help">Demo note: this front-end version has no server or account authentication. Do not enter sensitive personal information.</p>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Save profile <span>→</span></button><button class="btn danger-button" type="button" id="clearProfile">Clear profile</button></div>
+      </form>
+    </section>
+    <aside class="surface-card">
+      <div class="panel-heading"><div><span class="eyebrow">PROFILE PREVIEW</span><h2>Your learner card</h2><p>This updates after you save your details.</p></div></div>
+      <div class="profile-summary"><div class="profile-large" id="previewInitial">S</div><div><h3 id="previewName">Student</h3><p id="previewCourse">Add your course to personalize this card</p></div></div>
+      <div class="detail-list">
+        <div class="detail-row"><span>Email</span><strong id="previewEmail">Not added</strong></div>
+        <div class="detail-row"><span>Student ID</span><strong id="previewId">Not added</strong></div>
+        <div class="detail-row"><span>Year of study</span><strong id="previewYear">Not selected</strong></div>
+      </div>
+      <div class="tip-card" style="margin-top:20px"><span class="tip-icon">✦</span><div><h3>Your learning goal</h3><p id="previewGoal">Your goal will appear here after you save your profile.</p></div></div>
+      <a class="btn btn-outline btn-full" style="margin-top:18px" href="index.html">Return to dashboard →</a>
+    </aside>
+  </div>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">E</span><span>EduSmart<small>STUDENT LEARNING HUB</small></span></a><p>Learn at your pace. Grow every day.</p><small>© <span id="year"></span> EduSmart · Front-end student project</small></footer>
+</main>
+<script src="preferences.js"></script>
+<script src="student.js"></script>
+</body></html>
